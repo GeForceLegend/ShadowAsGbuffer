@@ -11,9 +11,8 @@ const int shadowMapResolution = 2048;
 void main()
 {
     vec2 shadowCoord = (floor(texcoord * shadowMapResolution) + 0.5) / shadowMapResolution;
-    float shadowDepth = texture(shadowtex0, shadowCoord).r;
     fragColor = texture(shadowcolor0, shadowCoord);
-    if (texture(depthtex0, texcoord).r + 1e-4 < shadowDepth || shadowDepth == 1.0) {
+    if (texture(depthtex1, texcoord).r - 1e-4 < texture(shadowtex1, shadowCoord).r || texture(shadowtex0, shadowCoord).r == 1.0) {
         fragColor = texture(colortex0, texcoord);
     }
 }
