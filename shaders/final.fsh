@@ -13,7 +13,7 @@ void main()
     vec2 shadowCoord = (floor(texcoord * shadowMapResolution) + 0.5) / shadowMapResolution;
     float shadowDepth = texture(shadowtex0, shadowCoord).r;
     fragColor = texture(shadowcolor0, shadowCoord);
-    if (texture(depthtex0, texcoord).r + 1e-6 < shadowDepth || shadowDepth == 1.0) {
+    if (texture(depthtex0, texcoord).r + 1e-4 < shadowDepth || shadowDepth == 1.0) {
         fragColor = texture(colortex0, texcoord);
     }
 }
