@@ -22,6 +22,7 @@ uniform float centerDepthSmooth;
 uniform ivec2 atlasSize;
 uniform ivec2 eyeBrightnessSmooth;
 uniform vec3 fogColor;
+uniform vec3 viewOffset;
 uniform vec3 cameraPosition;
 uniform vec3 previousCameraPosition;
 uniform vec4 entityColor;
