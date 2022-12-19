@@ -5,7 +5,6 @@ layout (location = 0) out vec4 fragColor0;
 in vec4 color;
 in vec3 normal;
 in vec3 viewPos;
-in vec3 worldPos;
 in vec2 texcoord;
 
 #include "/Uniform.glsl"
